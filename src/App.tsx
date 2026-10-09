@@ -3,11 +3,18 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-
-
+//All 5 of the above lines extract the exported values from the files by name. Noticeably, the first import extract from a package named React insteado of a code file.
 
 function App() {
   const [count, setCount] = useState(0)
+  //I noticed that there is a missing semicolon at the end of the above line of code. I wonder if it is supposed to be that way?
+  //From left to right: the const means the variables declared cannot be assigned another value using '=' like any other variables that are declared using 'let'
+  //The way that the variables declared are also different from usual since it is using array destructuring. This syntax creates an array that has two elements: count and setCount.
+  //useState is modified in a way so that the first variable it is assigned to will be a variable of a primitive type, the second will bear a function instead of a primitive value.
+  //useState is a function that helps with tracking the states of variables. It uses a Fiber tree, where there are many Fibers, each Fiber point to one or many hooks.
+  //a Hook is a record of variables' values each time it changes. I am not confident to say that each change would result in a new Hook, but I think it is safe to say that each <App /> will create a new Hook for count variable. About the function, though, I'm not so sure.
+  //a Hook is connected similar to a Linked List. The name of the variable does not determine the Hook, but rather the order in which useState is used in.
+  //this specific useState function assigned the initial value of 0 to the variable count, and every time the App function is called upon, before reassigning the value 0 to the count variable again, it will check the Fiber tree and select the Fiber that matches App(), follow the Hooks to know the previous value that count was last changed to.
 
   return (
     <>
