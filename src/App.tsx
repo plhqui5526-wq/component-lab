@@ -51,7 +51,10 @@ function App() {
       {/* It appears that "ticks" represent a break line, at first I was confused, then I used the Inspect mode and figured out the position of "ticks" */}
       {/* The code below creates another section that contains the contact information, I do not know why there must be ids to some of the components, because there are no DOM manipulation being used.
       I am not familiar with the <svg> tag, but it appears from a Google Search that it is used to render images without being afraid the quality might break down when scaling larger.
-      I found the icons svg, but it shows nothing, I figured there must be some manipulation being done because there is "#documentation-icon" placed right after. */}
+      I found the icons svg, but it shows nothing, I figured there must be some manipulation being done because there is "#documentation-icon" placed right after.
+      I am not familiar with the role and aria-hidden attribute.
+      I take back my previous comment about how the components are still assigned ids even when there are no DOM manipulation, it turns out that the ids are used in the App.css, which I will talk about later.
+       */}
       <section id="next-steps">
         <div id="docs">
           <svg className="icon" role="presentation" aria-hidden="true">
