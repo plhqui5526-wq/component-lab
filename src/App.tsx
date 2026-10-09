@@ -38,9 +38,20 @@ function App() {
           Count is {count}
         </button>
       </section>
+      {/* I noticed how weird the comment syntax here is. I wonder why I cannot use the HMLT comment syntax here, but I can use JavaScripts'. It is placed inside curly brackets, being treated like a JavaScript value.
+      The above HTML code creates a section containing two divs and one button.
+      The first div contains three images, one container and two small logos placed on the container. The logos are modified in a way so that they are distorted to fit the dimension of the container.
+      The second div contains the headers and subheader.
+      The button utilizes the useState function above. I do not know the reason why we must declare the type="button" even though it is quite clear that we already used <button>
+      upon being clicked, it will call a function that uses the setCount function, and in the setCount function, we declare another arrow function that modifies the count value.
+      I thought the setCount could directly modify the value of count, but I assumed from the syntax it is just a function used for callbacks?
+      In that case, why don't we omit the first arrow function and just placed setCount outside instead of nesting it in the first arrow function? */}
 
       <div className="ticks"></div>
-
+      {/* It appears that "ticks" represent a break line, at first I was confused, then I used the Inspect mode and figured out the position of "ticks" */}
+      {/* The code below creates another section that contains the contact information, I do not know why there must be ids to some of the components, because there are no DOM manipulation being used.
+      I am not familiar with the <svg> tag, but it appears from a Google Search that it is used to render images without being afraid the quality might break down when scaling larger.
+      I found the icons svg, but it shows nothing, I figured there must be some manipulation being done because there is "#documentation-icon" placed right after. */}
       <section id="next-steps">
         <div id="docs">
           <svg className="icon" role="presentation" aria-hidden="true">
